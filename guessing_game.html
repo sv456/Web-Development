@@ -1,0 +1,26 @@
+<html>
+<body onload="game()">
+<script>
+var ran;
+function game() {
+  ran=(Math.random()*99)+1;
+  ran=parseInt(ran);
+}
+game();
+while (true) {
+  var guess=prompt("I am thinking of a number between 1 and 100"+"\n\n"+"Guess it");
+  if(guess==ran)
+  {
+    alert("u won the game");
+    break;
+  }
+  else if(guess<ran)
+   alert("guessed number is small");
+  else {
+    alert("guessed number is big");
+  }
+}
+
+
+</script></body>
+</html>
