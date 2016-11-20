@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+var num,ran_color,cnt=0,res,index=0,flag;
+var colors=["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+function game()
+{
+  num=Math.random()*colors.length;
+  num=Math.floor(num);
+  ran_color=colors[num];
+  alert("target color : "+ran_color);
+  while (true) {
+    res=prompt("Which color am I thinking"+"\n\n"+colors.join(","));
+    if(check_guess())break;
+    }
+  }
+  function check_guess() {
+    if(colors.indexOf(res)==-1)
+    {
+      alert("Sorry, I don’t recognize that color!\n\n"
+            + "Please try again.")
+      cnt++;
+      return false;
+    }
+    else if(res<ran_color)
+     {
+       alert("color u chose is alphabatically lower than mine");
+       cnt++;
+       return false;
+     }
+    else if(res>ran_color){
+      alert("color u chose is alphabetically higher than mine");
+      cnt++;
+      return false;
+    }
+    else {
+      alert("u won! but u took "+cnt+" guesses");
+      document.body.style.background=res;
+      return true;
+    }
+  }
+</script>
+</head>
+<body onload="game()">
+</body>
+</html>
