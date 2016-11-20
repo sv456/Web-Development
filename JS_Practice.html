@@ -1,0 +1,70 @@
+<html>
+<head>
+  <script>
+  function do_something() {
+    if(age()<18)
+    {
+      alert("Adult content!")
+    }
+  }
+  function age() {
+    var a;
+    a=prompt("enter age");
+    return parseInt(a);
+  }
+  function name() {
+    alert('sandesh is a great name');
+    var response,fb=false;
+
+    while(fb!=true)
+    {
+        response=prompt('do u agree?');
+      if(response.indexOf("y")==0)
+       fb=true;
+     }
+  }
+</script>
+</head>
+<body onload="do_something(); name()">
+  <script>
+    alert("hello is type " + typeof "hello" +"\n" +
+          "3.14 is type " + typeof 3.14);
+    if(confirm("want to go to nie?"))
+    {
+      document.location.href="http://www.nie.ac.in";
+    }
+    var usr_name;
+    usr_name=prompt("ur name?");
+    console.log("value entered was "+usr_name);
+    document.write("Welcome to my page "+usr_name +"!");
+    var pets=['dogs','cats','cows']
+    //var pets=new Array(10);
+    alert(pets.join(" and "));
+    alert(pets.length);
+    alert(pets.push("Hamster"));
+    alert(pets.unshift("Rabbits"));
+    alert(pets);
+    alert(pets.pop());
+    alert(pets);
+    alert(pets.shift());
+    alert(pets);
+    var num=[1,2,3]
+    var res=pets.concat(num);
+    alert(res);
+    var todo=["eat","sleep","office","read"];
+    var priority=[2,4,3,1];
+    var todo_in_order=[];
+    var index=0;
+    while (index<todo.length) {
+      var res=priority.indexOf(index+1);
+      todo_in_order.push(todo[res]);
+      index++;
+    }
+    alert(todo_in_order);
+    var ran_num=Math.random()*10;
+    ran_num=Math.floor(ran_num);
+    alert('random number is: '+ran_num);
+
+  </script>
+</body>
+</html>
